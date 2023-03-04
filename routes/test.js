@@ -1,7 +1,7 @@
-const database = require("firebase/database")
-const getDatabase = database.getDatabase
-const ref = database.ref
-const set = database.set
+// const database = require("firebase/database")
+// const getDatabase = database.getDatabase
+// const ref = database.ref
+// const set = database.set
 const router = require("express").Router();
 
 router.post("/test", async(req, res) => {
@@ -22,7 +22,7 @@ router.post("/test", async(req, res) => {
         console.log("Success");
     }
     else {
-        res.status(500).send("Error")
+        res.status(501).send("Error")
         console.log("Err");
     }
 })
