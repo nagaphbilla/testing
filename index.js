@@ -22,8 +22,11 @@ const firebaseConfig = {
 
 const init = firebase.initializeApp(firebaseConfig)
 
-console.log(init)
+// console.log(init)
 
+app.get("/", (req, res) => {
+  res.status(200).send("Hello")
+})
 app.use("/api/test", test)
 
 const port = process.env.PORT || 8082;
